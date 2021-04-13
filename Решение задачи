@@ -1,0 +1,10 @@
+money = int(input("Сумма вклада: "))
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+
+dep_tkb = int(money*per_cent.get('ТКБ')/100)
+dep_skb = int(money*per_cent.get('СКБ')/100)
+dep_vtb = int(money*per_cent.get('ВТБ')/100)
+dep_sber = int(money*per_cent.get('СБЕР')/100)
+deposit = [dep_tkb, dep_skb, dep_vtb, dep_sber]
+print("Депозит: ", deposit)
+print("Максимальная сумма, которую вы можете заработать:", max(deposit))
